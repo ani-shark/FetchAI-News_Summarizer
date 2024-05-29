@@ -1,0 +1,30 @@
+<!-- app/templates/index.html -->
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>News Retrieval</title>
+        <link
+            rel="stylesheet"
+            href="{{ url_for('static', filename='css/style.css') }}"
+        />
+        <script
+            src="{{ url_for('static', filename='js/script.js') }}"
+            defer
+        ></script>
+    </head>
+    <body>
+        <h1>News Retrieval and Presentation</h1>
+        <input type="text" id="search" placeholder="Search for news" />
+        <input
+            type="text"
+            id="language"
+            placeholder="Language (e.g., es, fr, de)"
+        />
+        <button onclick="searchNews()">Search</button>
+        <div id="articles"></div>
+        <h2>Saved Articles</h2>
+        <div id="saved-articles"></div>
+    </body>
+</html>
